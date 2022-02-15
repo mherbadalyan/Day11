@@ -4,53 +4,53 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter 2 number and program will print all even numbers between your numbers");
-        printAllEvenNumbers(scanner.nextInt(),scanner.nextInt());
-
-        System.out.println("Enter 4 numbers start number, finish number, reminder , divider");
-        printNumbersWithReminder(scanner.nextInt(),scanner.nextInt(),scanner.nextInt(),scanner.nextInt());
-
-        System.out.println("Enter 2 numbers and program will" +
-                " print all numbers on the segment from a to b that are exact squares. ");
-        printAllExactSquares(scanner.nextInt(),scanner.nextInt());
-
+//        System.out.println("Enter 2 number and program will print all even numbers between your numbers");
+//        printAllEvenNumbers(scanner.nextInt(),scanner.nextInt());
+//
+//        System.out.println("Enter 4 numbers start number, finish number, reminder , divider");
+//        printNumbersWithReminder(scanner.nextInt(),scanner.nextInt(),scanner.nextInt(),scanner.nextInt());
+//
+//        System.out.println("Enter 2 numbers and program will" +
+//                " print all numbers on the segment from a to b that are exact squares. ");
+//        printAllExactSquares(scanner.nextInt(),scanner.nextInt());
+//
         System.out.println("Enter 1 number and 1 digit " +
                 " and program will print how many times second digit occures in first");
         printCountOfDigit(scanner.nextInt(),scanner.nextInt());
-
-        System.out.println("Enter number and program will revers and print it");
-        printReversNumber(scanner.nextInt());
-
-        System.out.println("Enter number and program will find and print it smallest fivisor");
-        printSmallestDivisor(scanner.nextInt());
-
-        System.out.println("Enter number and program will print all natural divisors");
-        printAllNaturalDivisors(scanner.nextInt());
-
-        System.out.println("Enter number and program will print count of all natural divisors");
-        printCountOfAllNaturalDivisors(scanner.nextInt());
-
-        printSumOfInputNumbers();
-
-        System.out.println("Enter binary number with max length 10 and program will it decimal value");
-        convertAndPrintBinaryToDecimal(scanner.nextInt());
-
-        printThreeCounters();
-
-        System.out.println("Enter GNCHE-1 seconds");
-        printGncheNumber(scanner.nextInt());
-
-        System.out.println("Enter table size to print it");
-        printTable1(scanner.nextInt());
-
-        System.out.println("Enter table size to print it");
-        printTable2(scanner.nextInt());
-
-        System.out.println("Enter size of multiplication table");
-        printMultiplicationTable(scanner.nextInt());
-
-        System.out.println("Enter size of table");
-        print4Tables(scanner.nextInt());
+//
+//        System.out.println("Enter number and program will revers and print it");
+//        printReversNumber(scanner.nextInt());
+//
+//        System.out.println("Enter number and program will find and print it smallest fivisor");
+//        printSmallestDivisor(scanner.nextInt());
+//
+//        System.out.println("Enter number and program will print all natural divisors");
+//        printAllNaturalDivisors(scanner.nextInt());
+//
+//        System.out.println("Enter number and program will print count of all natural divisors");
+//        printCountOfAllNaturalDivisors(scanner.nextInt());
+//
+//        printSumOfInputNumbers();
+//
+//        System.out.println("Enter binary number with max length 10 and program will it decimal value");
+//        convertAndPrintBinaryToDecimal(scanner.nextInt());
+//
+//        printThreeCounters();
+//
+//        System.out.println("Enter GNCHE-1 seconds");
+//        printGncheNumber(scanner.nextInt());
+//
+//        System.out.println("Enter table size to print it");
+//        printTable1(scanner.nextInt());
+//
+//        System.out.println("Enter table size to print it");
+//        printTable2(scanner.nextInt());
+//
+//        System.out.println("Enter size of multiplication table");
+//        printMultiplicationTable(scanner.nextInt());
+//
+//        System.out.println("Enter size of table");
+//        print4Tables(scanner.nextInt());
     }
 
     /**
@@ -130,7 +130,7 @@ public class Main {
      * task14
      * printing table NxN with this picture
      * # # #
-     * # # #
+     *  # # #
      * # # #
      *
      * @param size
@@ -174,7 +174,7 @@ public class Main {
      */
     private static void printGncheNumber(int seconds) {
         int count = 0;
-        for (int digit = 0; digit < seconds; digit++) {
+        for (int digit = 0; digit <= seconds; digit++) {
             for (int digitNums = 0; digitNums < digit; digitNums++) {
                 System.out.print(digit + " ");
                 count++;
@@ -182,8 +182,6 @@ public class Main {
             }
             if (count == seconds) break;
         }
-
-
     }
 
     /**
@@ -203,8 +201,8 @@ public class Main {
             System.out.println("Enter number " + i);
             int num = scanner.nextInt();
             if (num == 0) count0++;
-            if (num > 0) countPos++;
-            if (num < 0) countNeg++;
+            else if (num > 0) countPos++;
+            else countNeg++;
         }
         System.out.println("Zero numbers = " + count0 + "\nPositive numbers = " + countPos + "\nNegative numbers = " + countNeg);
     }
@@ -289,7 +287,6 @@ public class Main {
                 System.out.println(i);
                 break;
             }
-
         }
     }
 
@@ -306,8 +303,7 @@ public class Main {
         }
         //reversing
         for (int i = num; i > 0; i /= 10) {
-            System.out.print(num % 10);
-            num /= 10;
+            System.out.print(i % 10);
         }
     }
 
@@ -320,11 +316,10 @@ public class Main {
      */
     private static void printCountOfDigit(int num, int digit) {
         int count = 0;
-        for (int i = num; i > 0; i--) {
-            if (num % 10 == digit) {
+        for (int i = num; i > 0; i /= 10) {
+            if (i % 10 == digit) {
                 count++;
             }
-            num /= 10;
         }
         System.out.println(count);
     }
@@ -352,6 +347,10 @@ public class Main {
      * @param divider
      */
     private static void printNumbersWithReminder(int startNum, int endNum, int reminder, int divider) {
+        if (divider == 0){
+            System.out.println("Error , divided by zero ");
+            return;
+        }
         int count = 0;
         for (int i = startNum; i <= endNum; i++) {
             if (i % divider == reminder) {
