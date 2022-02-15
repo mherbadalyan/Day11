@@ -4,53 +4,53 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-//        System.out.println("Enter 2 number and program will print all even numbers between your numbers");
-//        printAllEvenNumbers(scanner.nextInt(),scanner.nextInt());
-//
-//        System.out.println("Enter 4 numbers start number, finish number, reminder , divider");
-//        printNumbersWithReminder(scanner.nextInt(),scanner.nextInt(),scanner.nextInt(),scanner.nextInt());
-//
-//        System.out.println("Enter 2 numbers and program will" +
-//                " print all numbers on the segment from a to b that are exact squares. ");
-//        printAllExactSquares(scanner.nextInt(),scanner.nextInt());
-//
+        System.out.println("Enter 2 number and program will print all even numbers between your numbers");
+        printAllEvenNumbers(scanner.nextInt(),scanner.nextInt());
+
+        System.out.println("Enter 4 numbers start number, finish number, reminder , divider");
+        printNumbersWithReminder(scanner.nextInt(),scanner.nextInt(),scanner.nextInt(),scanner.nextInt());
+
+        System.out.println("Enter 2 numbers and program will" +
+                " print all numbers on the segment from a to b that are exact squares. ");
+        printAllExactSquares(scanner.nextInt(),scanner.nextInt());
+
         System.out.println("Enter 1 number and 1 digit " +
                 " and program will print how many times second digit occures in first");
         printCountOfDigit(scanner.nextInt(),scanner.nextInt());
-//
-//        System.out.println("Enter number and program will revers and print it");
-//        printReversNumber(scanner.nextInt());
-//
-//        System.out.println("Enter number and program will find and print it smallest fivisor");
-//        printSmallestDivisor(scanner.nextInt());
-//
-//        System.out.println("Enter number and program will print all natural divisors");
-//        printAllNaturalDivisors(scanner.nextInt());
-//
-//        System.out.println("Enter number and program will print count of all natural divisors");
-//        printCountOfAllNaturalDivisors(scanner.nextInt());
-//
-//        printSumOfInputNumbers();
-//
-//        System.out.println("Enter binary number with max length 10 and program will it decimal value");
-//        convertAndPrintBinaryToDecimal(scanner.nextInt());
-//
-//        printThreeCounters();
-//
-//        System.out.println("Enter GNCHE-1 seconds");
-//        printGncheNumber(scanner.nextInt());
-//
-//        System.out.println("Enter table size to print it");
-//        printTable1(scanner.nextInt());
-//
-//        System.out.println("Enter table size to print it");
-//        printTable2(scanner.nextInt());
-//
-//        System.out.println("Enter size of multiplication table");
-//        printMultiplicationTable(scanner.nextInt());
-//
-//        System.out.println("Enter size of table");
-//        print4Tables(scanner.nextInt());
+
+        System.out.println("Enter number and program will revers and print it");
+        printReversNumber(scanner.nextInt());
+
+        System.out.println("Enter number and program will find and print it smallest fivisor");
+        printSmallestDivisor(scanner.nextInt());
+
+        System.out.println("Enter number and program will print all natural divisors");
+        printAllNaturalDivisors(scanner.nextInt());
+
+        System.out.println("Enter number and program will print count of all natural divisors");
+        printCountOfAllNaturalDivisors(scanner.nextInt());
+
+        printSumOfInputNumbers();
+
+        System.out.println("Enter binary number with max length 10 and program will it decimal value");
+        convertAndPrintBinaryToDecimal(scanner.nextInt());
+
+        printThreeCounters();
+
+        System.out.println("Enter GNCHE-1 seconds");
+        printGncheNumber(scanner.nextInt());
+
+        System.out.println("Enter table size to print it");
+        printTable1(scanner.nextInt());
+
+        System.out.println("Enter table size to print it");
+        printTable2(scanner.nextInt());
+
+        System.out.println("Enter size of multiplication table");
+        printMultiplicationTable(scanner.nextInt());
+
+        System.out.println("Enter size of table");
+        print4Tables(scanner.nextInt());
     }
 
     /**
