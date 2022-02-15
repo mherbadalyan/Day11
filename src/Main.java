@@ -1,5 +1,3 @@
-import javax.imageio.ImageTranscoder;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
