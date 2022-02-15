@@ -51,7 +51,53 @@ public class Main {
         System.out.println("Enter size of multiplication table");
         printMultiplicationTable(scanner.nextInt());
 
+        System.out.println("Enter size of table");
+        print4Tables(scanner.nextInt());
+    }
 
+    /**
+     * task16
+     * printing 4 variants of table from input size
+     * @param num
+     */
+    private static void print4Tables(int num) {
+        System.out.println("A.\n");
+        for (int i = 0; i < num; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        System.out.println("B.\n");
+        for (int i = num; i > 0; i--) {
+            for (int j = 0; j < i ; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        System.out.println("C.\n");
+        for (int i = 0; i < num; i++) {
+            for (int j = 0; j < i ; j++) {
+                System.out.print(" ");
+            }
+            for (int j = i; j < num; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        System.out.println("D.\n");
+        for (int i = 0; i < num; i++) {
+            for (int j = 1; j < num - i ; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <=i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     /**
